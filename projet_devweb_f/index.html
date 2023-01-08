@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<head>
+        <meta charset="UTF-8"/>
+        <metra name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <metra http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+        <title>MUSEUM MAPS</title>
+         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+        crossorigin=""/>
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css" />
+        <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css" />
+        
+        
+
+        <style>
+        #Map{
+            height: 99vh;
+            width: 100%;
+            z-index: 0;
+            
+        }
+
+        .popupimg{
+            width: 100%;
+            align-content: center;
+        }
+
+        #container {
+        position: relative;
+        }
+
+        #type-select{
+            position: absolute;
+            top: 40px;
+            left: 70px;
+            z-index: 1;
+        }
+
+        #type-select:hover{
+           font-size: 1.5em;
+        }
+
+        label{
+            position: absolute;
+            top: 10px;
+            left: 60px;
+            font-size: 20px;
+            z-index: 1;
+        }
+
+        label:hover{
+            font-size: 25px;
+        }
+
+            
+        </style>
+</head>
+<body>
+
+<div id="container">
+
+<label for="types">Choose a Museum Type:</label>
+<select name="types" id="type-select">
+    <option value="art-museum">Art Museum</option>
+    <option value="historical-museum">Historical Museum</option>
+    <option value="science-museum">Science Museum</option>
+    <option value="sport-museum">Sport Museum</option>
+    <option value="wax-museum">Wax Museum</option>
+    <option value="all-museum">All Museum</option>
+</select>
+    
+    <div id="Map"></div>
+
+
+
+
+
+
+     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+     <script type='text/javascript' src='https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js'></script>
+     
+
+     <script src = "mapcreation.js"></script>
+     <script src = "select.js"></script>
+     <script src = "point_icone.js"></script>
+
+
+</div>
+
+
+</body>
+
+</html>
